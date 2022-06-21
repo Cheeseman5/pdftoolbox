@@ -33,6 +33,12 @@
 ##### Context menu wireframe
 [![menu-context-wireframe PNG](https://github.com/Cheeseman5/PdfToolbox/blob/master/docs/images/layout_wireframe_initial_menu_context.PNG?raw=true)]()
 
+<br>
+
+___
+
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
