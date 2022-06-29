@@ -1,4 +1,5 @@
 .documents-pane {
     background-color: darkcyan;
     width: 30%;
+    overflow: auto;
 }

@@ -1,4 +1,7 @@
 .page-pane {
+    display: flex;
+    flex-wrap: wrap;
     background-color: aquamarine;
-    width: -webkit-fill-available;
+    width: 100%;
+    overflow: auto;
 }
