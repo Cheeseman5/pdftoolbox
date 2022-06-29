@@ -1,0 +1,4 @@
+.page-pane {
+    background-color: aquamarine;
+    width: -webkit-fill-available;
+}
