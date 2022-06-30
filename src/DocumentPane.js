@@ -4,8 +4,14 @@ import Pdf from './Pdf';
 
 export default function DocumentsPane() {
     const PopulatePages = () => {
-        const Len = 50;
-        return Array(Len).fill(<Pdf/>);
+        const name = 'test-doc-name.pdf';
+        const Len = 20;
+        let pages = Array(0);
+        
+        for(let i=1; i <= Array(Len).length; i++) {
+            pages.push(<Pdf id={i} pageText={`${i} pages`} name={name}/>);
+        }
+        return pages;
     }
 
     return (
