@@ -1,6 +1,31 @@
 .Pdf {
-    width: 4rem;
-    height: 5rem;
     background-color: gray;
     margin: 0.5rem;
+    border-radius: 3px;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    transition: 0.3s;
+    max-width: 300px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.Pdf:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+}
+
+.card-image {
+    border-radius: 3px 3px 0 0;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.card-title, 
+.card-text {
+    margin: 0.25em;
+}
+
+.card-overlay {
+    background-color: white;
+    padding: 2px 16px;
+    border-radius: 0 0 3px 3px;
 }
