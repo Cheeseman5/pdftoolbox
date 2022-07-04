@@ -9,7 +9,11 @@ export default function PagePane() {
         let pages = Array(0);
         
         for(let i=1; i <= Array(Len).length; i++) {
-            pages.push(<Pdf id={i} pageText={`page ${i}`} name={name}/>);
+            pages.push(
+                <ul key={i}>
+                    <Pdf id={i} pageText={`page ${i}`} name={name}/>
+                </ul>
+            );
         }
         return pages;
     }

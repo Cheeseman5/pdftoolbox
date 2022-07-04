@@ -1,4 +1,4 @@
-.Pdf {
+.pdf-card {
     background-color: gray;
     margin: 0.5rem;
     border-radius: 3px;
@@ -6,10 +6,11 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
     transition: 0.3s;
     max-width: 300px;
+    list-style-type: none;
 }
 
 /* On mouse-over, add a deeper shadow */
-.Pdf:hover {
+.pdf-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
 }
 
