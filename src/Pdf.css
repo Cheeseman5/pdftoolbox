@@ -1,3 +1,8 @@
+.pdf-card.selected {
+    background-color: fuchsia;
+    border: 1px;
+}
+
 .pdf-card {
     background-color: gray;
     margin: 0.5rem;
@@ -9,9 +14,13 @@
     list-style-type: none;
 }
 
+
 /* On mouse-over, add a deeper shadow */
 .pdf-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+}
+.pdf-card:focus {
+    background-color: aquamarine;
 }
 
 .card-image {

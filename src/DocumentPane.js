@@ -7,6 +7,31 @@ export default function DocumentsPane() {
     let activeDocument;
     let documents = [];
 
+    const toggleSelected = (li) => {
+        li.classList.toggle('selected');
+    }
+    const singleSelect = (pdfCard) => {
+        const selected = document.querySelectorAll('.page-pane .selected,.documents-pane .selected');
+        
+        for(let elem of selected) {
+            elem.classList.remove('selected');
+        }
+        pdfCard.classList.add('selected');
+    }
+    const onClick = (event) => {
+        if(event.currentTarget.tagName !== 'LI') return;
+
+        if(event.ctrlKey || event.metaKey){
+            toggleSelected(event.currentTarget);
+        } else {
+            singleSelect(event.currentTarget);
+        }
+    }
+
+    const setActive = (doc) => {
+        activeDocument = doc;
+        console.log(`document '${doc.name}' now selected`);
+    };
     const PopulateDocuments = () => {
         const count = 20;
         const pageCount = 50;
@@ -16,7 +41,7 @@ export default function DocumentsPane() {
         [...Array(count).keys()].map(i => {
             const pages = GeneratePages(pageCount, name);
             docs.push(
-                <PdfDocument pages={pages}/>
+                <PdfDocument pages={pages} onClick={onClick}/>
             )
         });
         documents = docs;
@@ -30,7 +55,6 @@ export default function DocumentsPane() {
             const pageText = `page ${i}`;
             pages.push(<Pdf id={i} name={name} pageText={pageText}/>)
         });
-        console.log(`${name}: ${pages.length}`);
         return pages;
     }
 

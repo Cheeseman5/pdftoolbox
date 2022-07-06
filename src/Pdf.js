@@ -2,13 +2,20 @@ import React from 'react';
 import './Pdf.css';
 
 export default function Pdf(props) {
+    const image = props.image || 'default.png';
+    const id = props.id;
+    const name = props.name;
+    const pageText = props.pageText;
+    const onClick = (event) => {
+        props.onClick(event);
+    }
     return (
-        <div key={props.id} className='pdf pdf-card'>
-            <img className='card-image' src='default.png'/>
+        <li key={id} className='pdf pdf-card' onClick={onClick}>
+            <img className='card-image' src={image} alt={image}/>
             <div className='card-overlay'>
-                <h4 className='card-title'>{ props.name }</h4>
-                <p className='card-text'>{ props.pageText }</p>
+                <h4 className='card-title'>{ name }</h4>
+                <p className='card-text'>{ pageText }</p>
             </div>
-        </div>
+        </li>
     );
 }

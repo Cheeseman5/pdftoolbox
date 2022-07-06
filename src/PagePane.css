@@ -1,6 +1,9 @@
-.page-pane {
+ul {
     display: flex;
     flex-wrap: wrap;
+}
+
+.page-pane {
     background-color: aquamarine;
     width: 100%;
     overflow: auto;
