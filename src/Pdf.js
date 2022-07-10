@@ -6,9 +6,11 @@ export default function Pdf(props) {
     const id = props.id;
     const name = props.name;
     const pageText = props.pageText;
+    
     const onClick = (event) => {
         props.onClick(event);
     }
+
     return (
         <li key={id} className='pdf pdf-card' onClick={onClick}>
             <img className='card-image' src={image} alt={image}/>
