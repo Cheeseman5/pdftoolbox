@@ -2,7 +2,7 @@ import React from 'react';
 import './PagePane.css';
 import Pdf from './Pdf';
 
-export default function PagePane() {
+export default function PagePane(props) {
     
     const toggleSelected = (li) => {
         li.classList.toggle('selected');
@@ -24,23 +24,11 @@ export default function PagePane() {
             singleSelect(event.currentTarget);
         }
     }
-    const PopulatePages = () => {
-        const name = 'test-doc-name.pdf';
-        const Len = 100;
-        let pages = Array(0);
         
-        for(let i=1; i <= Array(Len).length; i++) {
-            pages.push(
-                    <Pdf id={i} pageText={`page ${i}`} name={name} onClick={onClick}/>
-                );
-            }
-            return pages;
-        }
-        
-        return (
+    return (
         <div className='page-pane'>
             <ul>
-                { PopulatePages() }
+                { props.activePages }
             </ul>
         </div>
     )
